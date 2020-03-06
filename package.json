@@ -18,6 +18,8 @@
   "homepage": "https://github.com/NIRumiantsev/frontend-project-lvl1#readme",
   "type": "module",
   "dependencies": {
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
