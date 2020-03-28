@@ -1,13 +1,11 @@
+install:
+	npm install
 
-install: install-deps
+start:
+	npx babel-node src/bin/brain-calc.js
 
-run:
-	node 'bin/brain-games.js'
-
-install-deps:
-	npm ci
+publish:
+	npm publish --dry-run
 
 lint:
 	npx eslint .
-
-
