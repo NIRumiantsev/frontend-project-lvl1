@@ -1,4 +1,4 @@
-import engine from '../index.js';
+import engineRun from '../index.js';
 
 const gameDescription = 'What is the result of the expression?';
 
@@ -37,4 +37,4 @@ const questionAndAnswer = () => {
     return [randomExpression, correctAnswer];
 };
 
-export default () => engine(gameDescription, questionAndAnswer);
+export default () => engineRun(gameDescription, questionAndAnswer);

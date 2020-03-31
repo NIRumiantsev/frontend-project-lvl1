@@ -1,4 +1,4 @@
-import engine from '../index.js';
+import engineRun from '../index.js';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -21,7 +21,7 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
      return [randomNumber, correctAnswer];
  };
 
- export default () => engine(gameDescription, questionAndAnswer);
+ export default () => engineRun(gameDescription, questionAndAnswer);
 
 
 

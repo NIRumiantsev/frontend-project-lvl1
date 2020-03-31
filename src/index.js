@@ -1,12 +1,12 @@
 import readlineSync from 'readline-sync';
 
-const engine = (gameDescription, questionAndAnswer) => {
+const engineRun = (gameDescription, questionAndAnswer) => {
 
     console.log('Welcome to the Brain Games!');
 
     const name = readlineSync.question('May I have your name? ');
 
-    console.log('Hello ' + name);
+    console.log(`Hello ${name}`);
 
     console.log(gameDescription);
 
@@ -20,11 +20,7 @@ const engine = (gameDescription, questionAndAnswer) => {
 
         let answer = readlineSync.question('Your answer: ');
 
-        if (typeof answer === "string") {
-            answer = answer.toLowerCase();
-        }
-
-        if (correctAnswer == answer) {
+        if ((typeof answer === "string" && correctAnswer == answer.toLowerCase()) || (correctAnswer == answer)) {
             console.log('Correct!');
         } else {
             console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
@@ -37,7 +33,7 @@ const engine = (gameDescription, questionAndAnswer) => {
 
 };
 
-export default engine;
+export default engineRun;
 
 
 

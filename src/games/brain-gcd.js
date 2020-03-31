@@ -1,4 +1,4 @@
-import engine from '../index.js';
+import engineRun from '../index.js';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
@@ -28,7 +28,7 @@ const questionAndAnswer = () => {
 
 };
 
-export default () => engine(gameDescription, questionAndAnswer)
+export default () => engineRun(gameDescription, questionAndAnswer)
 
 
 
