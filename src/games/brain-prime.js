@@ -1,13 +1,14 @@
 import engineRun from '../index.js';
 
+import generateRandomNumber from "../utils.js";
+
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const questionAndAnswer = () => {
+const getQuestionAndAnswer = () => {
 
-    let randomNumber = Math.round(Math.random() * 100);
+    const randomNumber = generateRandomNumber(100, 0);
 
     let divisor = 1;
-
     let correctAnswer = '';
 
     for(let ind = 2; ind <= randomNumber && randomNumber % ind !== 0 ; ind++) {
@@ -30,4 +31,4 @@ const questionAndAnswer = () => {
 
 };
 
-export default () => engineRun(gameDescription, questionAndAnswer);
+export default () => engineRun(gameDescription, getQuestionAndAnswer);

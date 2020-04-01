@@ -1,10 +1,11 @@
 import engineRun from '../index.js';
+import generateRandomNumber from "../utils.js";
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
- const questionAndAnswer = () => {
+ const getQuestionAndAnswer = () => {
 
-     let randomNumber = Math.round(Math.random() * 100);
+     const randomNumber = generateRandomNumber(100, 0);
 
      let correctAnswer;
 
@@ -21,7 +22,7 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
      return [randomNumber, correctAnswer];
  };
 
- export default () => engineRun(gameDescription, questionAndAnswer);
+ export default () => engineRun(gameDescription, getQuestionAndAnswer);
 
 
 

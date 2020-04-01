@@ -1,12 +1,14 @@
 import engineRun from '../index.js';
 
+import generateRandomNumber from '../utils.js'
+
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-const questionAndAnswer = () => {
+const getQuestionAndAnswer = () => {
 
-    let randomNumberFirst = Math.round(Math.random() * 100);
+    const randomNumberFirst = generateRandomNumber(100, 0);
 
-    let randomNumberSecond = Math.round(Math.random() * 100);
+    const randomNumberSecond = generateRandomNumber(100, 0);
 
     const randomNumbers = (`${randomNumberFirst} ${randomNumberSecond}`);
 
@@ -28,7 +30,7 @@ const questionAndAnswer = () => {
 
 };
 
-export default () => engineRun(gameDescription, questionAndAnswer)
+export default () => engineRun(gameDescription, getQuestionAndAnswer)
 
 
 
