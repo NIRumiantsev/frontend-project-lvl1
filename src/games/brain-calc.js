@@ -16,25 +16,7 @@ const getQuestionAndAnswer = () => {
 
     const randomExpression = (`${randomNumberFirst} ${randomOperator} ${randomNumberSecond}`);
 
-    let correctAnswer;
-
-    if (randomOperator === '+') {
-
-        correctAnswer = randomNumberFirst + randomNumberSecond;
-
-    }
-
-    if (randomOperator === '-') {
-
-        correctAnswer = randomNumberFirst - randomNumberSecond;
-
-    }
-
-    if (randomOperator === '*') {
-
-        correctAnswer = randomNumberFirst * randomNumberSecond;
-
-    }
+    let correctAnswer = eval(randomExpression);
 
     return [randomExpression, correctAnswer];
 };

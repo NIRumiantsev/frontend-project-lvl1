@@ -9,7 +9,6 @@ const getQuestionAndAnswer = () => {
     const randomNumber = generateRandomNumber(100, 0);
 
     let divisor = 1;
-    let correctAnswer = '';
 
     for(let ind = 2; ind <= randomNumber && randomNumber % ind !== 0 ; ind++) {
 
@@ -17,15 +16,7 @@ const getQuestionAndAnswer = () => {
 
     }
 
-    if (divisor === randomNumber) {
-
-        correctAnswer = 'yes';
-
-    } else {
-
-        correctAnswer = 'no';
-
-    }
+    let correctAnswer = divisor === randomNumber ? 'yes' : 'no';
 
     return [randomNumber, correctAnswer];
 
