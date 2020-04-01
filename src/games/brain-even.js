@@ -7,17 +7,7 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
 
      const randomNumber = generateRandomNumber(100, 0);
 
-     let correctAnswer;
-
-     if (randomNumber % 2 === 0) {
-
-         correctAnswer = 'yes';
-
-     } else {
-
-         correctAnswer = 'no';
-
-     }
+     let correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no' ;
 
      return [randomNumber, correctAnswer];
  };
