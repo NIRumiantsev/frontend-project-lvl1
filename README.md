@@ -1,4 +1,4 @@
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+<a href="https://codeclimate.com/github/NIRumiantsev/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/d2241f7272c97616b4be/maintainability" /></a>
 
 Brain-even asciinema: https://asciinema.org/a/vyOWEqe35zYQrpCmxTMGCm098
 
