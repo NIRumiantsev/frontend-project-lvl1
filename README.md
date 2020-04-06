@@ -1,9 +1,8 @@
 <a href="https://codeclimate.com/github/NIRumiantsev/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/d2241f7272c97616b4be/maintainability" /></a>
 
-Brain-even asciinema:
+Brain-even asciinema: https://asciinema.org/a/vyOWEqe35zYQrpCmxTMGCm098
 
-<script src="https://asciinema.org/a/vyOWEqe35zYQrpCmxTMGCm098" id="asciicast-14" async></script>
-
+<a href="https://asciinema.org/a/14?autoplay=1"><img src="https://asciinema.org/a/14.png" width="836"/></a>
 
 Brain-gcd asciinema: https://asciinema.org/a/2jGwxOdh0sedbvPwq7FP3jDLS
 
