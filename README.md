@@ -2,7 +2,8 @@
 
 Brain-even asciinema: https://asciinema.org/a/vyOWEqe35zYQrpCmxTMGCm098
 
-<script src="https://asciinema.org/a/14.js" id="asciicast-14" async></script>
+<script id="asciicast-LM7qiAOlS6ipCMzSvMVivBDZo" src="https://asciinema.org/a/LM7qiAOlS6ipCMzSvMVivBDZo.js" async></script>
+
 
 Brain-gcd asciinema: https://asciinema.org/a/2jGwxOdh0sedbvPwq7FP3jDLS
 
