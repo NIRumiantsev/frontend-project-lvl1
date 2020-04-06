@@ -5,11 +5,11 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
 
  const getQuestionAndAnswer = () => {
 
-     const randomNumber = generateRandomNumber(100, 0);
+     const question = generateRandomNumber(100, 0);
 
-     let correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no' ;
+     const correctAnswer = question % 2 === 0 ? 'yes' : 'no' ;
 
-     return [randomNumber, correctAnswer];
+     return [question, correctAnswer];
  };
 
  export default () => engineRun(gameDescription, getQuestionAndAnswer);

@@ -8,7 +8,7 @@ const getQuestionAndAnswer = () => {
 
     let randomNumber = generateRandomNumber(100, 0);
 
-    let progression = [randomNumber];
+    let question = [randomNumber];
 
     let randomIncrease = generateRandomNumber(10, 0);
 
@@ -16,17 +16,17 @@ const getQuestionAndAnswer = () => {
 
         randomNumber += randomIncrease;
 
-        progression.push(randomNumber);
+        question.push(randomNumber);
 
     }
 
     let randomLocation = generateRandomNumber(10, 0);
 
-    let correctAnswer = progression[randomLocation];
+    let correctAnswer = question[randomLocation];
 
-    progression[randomLocation] = '..';
+    question[randomLocation] = '..';
 
-    return [progression, correctAnswer]
+    return [question, correctAnswer]
 
 };
 

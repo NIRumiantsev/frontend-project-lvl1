@@ -14,11 +14,11 @@ const getQuestionAndAnswer = () => {
 
     let randomOperator = operators[generateRandomNumber(2, 0)];
 
-    const randomExpression = (`${randomNumberFirst} ${randomOperator} ${randomNumberSecond}`);
+    const question = (`${randomNumberFirst} ${randomOperator} ${randomNumberSecond}`);
 
-    let correctAnswer = eval(randomExpression);
+    let correctAnswer = eval(question);
 
-    return [randomExpression, correctAnswer];
+    return [question, correctAnswer];
 };
 
 export default () => engineRun(gameDescription, getQuestionAndAnswer);

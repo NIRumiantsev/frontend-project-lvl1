@@ -10,7 +10,7 @@ const getQuestionAndAnswer = () => {
 
     const randomNumberSecond = generateRandomNumber(100, 0);
 
-    const randomNumbers = (`${randomNumberFirst} ${randomNumberSecond}`);
+    const question = (`${randomNumberFirst} ${randomNumberSecond}`);
 
     let correctAnswer;
 
@@ -26,7 +26,7 @@ const getQuestionAndAnswer = () => {
 
     }
 
-    return [randomNumbers, correctAnswer];
+    return [question, correctAnswer];
 
 };
 

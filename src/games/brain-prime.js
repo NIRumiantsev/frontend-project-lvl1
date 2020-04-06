@@ -6,19 +6,19 @@ const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer
 
 const getQuestionAndAnswer = () => {
 
-    const randomNumber = generateRandomNumber(100, 0);
+    const question = generateRandomNumber(100, 0);
 
     let divisor = 1;
 
-    for(let ind = 2; ind <= randomNumber && randomNumber % ind !== 0 ; ind++) {
+    for(let ind = 2; ind <= question && question % ind !== 0 ; ind++) {
 
         divisor = ind;
 
     }
 
-    let correctAnswer = divisor === randomNumber ? 'yes' : 'no';
+    let correctAnswer = divisor === question ? 'yes' : 'no';
 
-    return [randomNumber, correctAnswer];
+    return [question, correctAnswer];
 
 };
 

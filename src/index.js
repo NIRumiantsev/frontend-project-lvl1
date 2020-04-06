@@ -18,7 +18,7 @@ const engineRun = (gameDescription, getQuestionAndAnswer) => {
 
         console.log(`Question: ${question}`);
 
-        let answer = readlineSync.question('Your answer: ');
+        const answer = readlineSync.question('Your answer: ');
 
         if (correctAnswer == answer.toLowerCase()) {
             console.log('Correct!');
