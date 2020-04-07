@@ -2,6 +2,24 @@ import engineRun from '../index.js';
 
 import generateRandomNumber from '../utils.js'
 
+const findDivisor = (firstNumber, secondNumber) => {
+
+    let result;
+
+    for (let ind = 1; ind <= firstNumber && ind <= secondNumber; ind++) {
+
+        if (firstNumber % ind !== 0 || secondNumber % ind !== 0) {
+
+            continue;
+
+        }
+
+        result = ind;
+
+    }
+    return result;
+};
+
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const getQuestionAndAnswer = () => {
@@ -12,19 +30,7 @@ const getQuestionAndAnswer = () => {
 
     const question = (`${randomNumberFirst} ${randomNumberSecond}`);
 
-    let correctAnswer;
-
-    for (let ind = 1; ind <= randomNumberFirst && ind <= randomNumberSecond; ind++) {
-
-        if (randomNumberFirst % ind !== 0 || randomNumberSecond % ind !== 0) {
-
-            continue;
-
-        }
-
-        correctAnswer = ind;
-
-    }
+    let correctAnswer = findDivisor(randomNumberFirst, randomNumberSecond);
 
     return [question, correctAnswer];
 
