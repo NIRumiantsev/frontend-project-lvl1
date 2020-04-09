@@ -5,7 +5,7 @@ import generateRandomNumber from '../utils.js';
 const checkPrime = (number) => {
   let divisor = 1;
 
-  for (let ind = 2; ind <= number && number % ind !== 0 ; ind += 1){
+  for (let ind = 2; ind <= number && number % ind !== 0; ind += 1) {
     divisor = ind;
   }
 

@@ -23,8 +23,7 @@ const getQuestionAndAnswer = () => {
 
   question[randomLocation] = '..';
 
-  return [question, correctAnswer]
-
+  return [question, correctAnswer];
 };
 
 export default () => engineRun(gameDescription, getQuestionAndAnswer);
