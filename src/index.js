@@ -1,43 +1,37 @@
+/* eslint eqeqeq: 0 */ // --> OFF
+
 import readlineSync from 'readline-sync';
 
 const count = 3;
 
 const engineRun = (gameDescription, getQuestionAndAnswer) => {
 
-    console.log('Welcome to the Brain Games!');
+  console.log('Welcome to the Brain Games!');
 
-    const name = readlineSync.question('May I have your name? ');
+  const name = readlineSync.question('May I have your name? ');
 
-    console.log(`Hello ${name}`);
+  console.log(`Hello ${name}`);
 
-    console.log(gameDescription);
+  console.log(gameDescription);
 
-    for (let i = 0; i < count; i += 1) {
+  for (let i = 0; i < count; i += 1) {
 
-        const [question, correctAnswer] = getQuestionAndAnswer();
+    const [question, correctAnswer] = getQuestionAndAnswer();
 
-        console.log(`Question: ${question}`);
+    console.log(`Question: ${question}`);
 
-        const answer = readlineSync.question('Your answer: ');
+    const answer = readlineSync.question('Your answer: ');
 
-        if (correctAnswer == answer.toLowerCase()) {
-            console.log('Correct!');
-        } else {
-            console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-            console.log(`Let's try again, ${name}!`);
-            return;
-        }
+    if (correctAnswer == answer.toLowerCase()) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
+  }
 
-    console.log(`Congratulations, ${name}`);
-
+  console.log(`Congratulations, ${name}`);
 };
 
 export default engineRun;
-
-
-
-
-
-
-

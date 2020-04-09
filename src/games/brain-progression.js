@@ -1,32 +1,29 @@
 import engineRun from '../index.js';
 
-import generateRandomNumber from "../utils.js";
+import generateRandomNumber from '../utils.js';
 
 const gameDescription = 'What number is missing in the progression?';
 
 const getQuestionAndAnswer = () => {
+  let randomNumber = generateRandomNumber(100, 0);
 
-    let randomNumber = generateRandomNumber(100, 0);
+  const question = [randomNumber];
 
-    let question = [randomNumber];
+  const randomIncrease = generateRandomNumber(10, 0);
 
-    let randomIncrease = generateRandomNumber(10, 0);
+  for (let n = 0; n < 10; n += 1) {
+    randomNumber += randomIncrease;
 
-    for (let n = 0; n < 10; n++) {
+    question.push(randomNumber);
+  }
 
-        randomNumber += randomIncrease;
+  const randomLocation = generateRandomNumber(10, 0);
 
-        question.push(randomNumber);
+  const correctAnswer = question[randomLocation];
 
-    }
+  question[randomLocation] = '..';
 
-    let randomLocation = generateRandomNumber(10, 0);
-
-    let correctAnswer = question[randomLocation];
-
-    question[randomLocation] = '..';
-
-    return [question, correctAnswer]
+  return [question, correctAnswer]
 
 };
 
