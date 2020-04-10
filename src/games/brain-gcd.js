@@ -3,6 +3,16 @@ import engineRun from '../index.js';
 import generateRandomNumber from '../utils.js';
 
 const findDivisor = (firstNumber, secondNumber) => {
+  if (firstNumber === 0 && secondNumber !== 0) {
+    return secondNumber;
+  }
+  if (secondNumber === 0 && secondNumber !== 0) {
+    return firstNumber;
+  }
+  if (secondNumber === 0 && firstNumber === 0) {
+    return 0;
+  }
+
   let result;
 
   for (let ind = 1; ind <= firstNumber && ind <= secondNumber; ind += 1) {
@@ -20,7 +30,7 @@ const getQuestionAndAnswer = () => {
 
   const randomNumberSecond = generateRandomNumber(100, 0);
 
-  const question = (`${randomNumberFirst} ${randomNumberSecond}`);
+  const question = `${randomNumberFirst} ${randomNumberSecond}`;
 
   const correctAnswer = findDivisor(randomNumberFirst, randomNumberSecond);
 

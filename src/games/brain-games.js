@@ -8,4 +8,4 @@ const startBrainGames = () => {
   console.log(`Hello ${name}`);
 };
 
-export default () => startBrainGames();
+export default startBrainGames;

@@ -6,18 +6,32 @@ import generateRandomNumber from '../utils.js';
 
 const gameDescription = 'What is the result of the expression?';
 
+const operators = ['+', '-', '*'];
+
 const getQuestionAndAnswer = () => {
   const randomNumberFirst = generateRandomNumber(100, 0);
 
   const randomNumberSecond = generateRandomNumber(100, 0);
 
-  const operators = ['+', '-', '*'];
+  const randomOperator = operators[generateRandomNumber(operators.length - 1, 0)];
 
-  const randomOperator = operators[generateRandomNumber(2, 0)];
+  const question = `${randomNumberFirst} ${randomOperator} ${randomNumberSecond}`;
 
-  const question = (`${randomNumberFirst} ${randomOperator} ${randomNumberSecond}`);
+  let correctAnswer;
 
-  const correctAnswer = eval(question);
+  switch (randomOperator) {
+    case '+':
+      correctAnswer = randomNumberFirst + randomNumberSecond;
+      break;
+    case '-':
+      correctAnswer = randomNumberFirst - randomNumberSecond;
+      break;
+    case '*':
+      correctAnswer = randomNumberFirst * randomNumberSecond;
+      break;
+    default:
+      console.log ("Please try again" );
+  }
 
   return [question, correctAnswer];
 };
