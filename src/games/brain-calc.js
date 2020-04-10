@@ -29,8 +29,7 @@ const getQuestionAndAnswer = () => {
     case '*':
       correctAnswer = randomNumberFirst * randomNumberSecond;
       break;
-    default:
-      console.log ("Please try again" );
+    default: console.log('Please try again');
   }
 
   return [question, correctAnswer];
