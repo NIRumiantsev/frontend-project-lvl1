@@ -1,7 +1,7 @@
 <a href="https://codeclimate.com/github/NIRumiantsev/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/d2241f7272c97616b4be/maintainability" /></a>
 
-![CI](https://github.com/NIRumiantsev/frontend-project-lvl1/workflows/CI/badge.svg)
-
+<a href="https://github.com/NIRumiantsev/frontend-project-lvl1/actions">![CI](https://github.com/NIRumiantsev/frontend-project-lvl1/workflows/CI/badge.svg)</a>
+ 
 Brain-even asciinema:
 
 <a href="https://asciinema.org/a/LM7qiAOlS6ipCMzSvMVivBDZo" target="_blank"><img src="https://asciinema.org/a/LM7qiAOlS6ipCMzSvMVivBDZo.svg" /></a>
