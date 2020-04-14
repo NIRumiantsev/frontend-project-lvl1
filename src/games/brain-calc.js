@@ -8,29 +8,29 @@ const gameDescription = 'What is the result of the expression?';
 
 const operators = ['+', '-', '*'];
 
-const getQuestionAndAnswer = () => {
-  const randomNumberFirst = generateRandomNumber(0, 100);
-
-  const randomNumberSecond = generateRandomNumber(0, 100);
-
-  const randomOperator = operators[generateRandomNumber(operators.length - 1, 0)];
-
-  const question = `${randomNumberFirst} ${randomOperator} ${randomNumberSecond}`;
-
-  let correctAnswer;
-
-  switch (randomOperator) {
+const calculateAnswer = (number1, operator, number2) => {
+  switch (operator) {
     case '+':
-      correctAnswer = randomNumberFirst + randomNumberSecond;
-      break;
+      return number1 + number2;
     case '-':
-      correctAnswer = randomNumberFirst - randomNumberSecond;
-      break;
+      return  number1 - number2;
     case '*':
-      correctAnswer = randomNumberFirst * randomNumberSecond;
-      break;
-    default: console.log('Please try again');
+      return  number1 * number2;
+    default:
+      throw new Error(`Unknown operator: '${operator}'!`);
   }
+};
+
+const getQuestionAndAnswer = () => {
+  const number1 = generateRandomNumber(0, 100);
+
+  const number2 = generateRandomNumber(0, 100);
+
+  const operator = operators[generateRandomNumber(operators.length - 1, 0)];
+
+  const question = `${number1} ${operator} ${number2}`;
+
+  let correctAnswer = calculateAnswer(number1, operator, number2);
 
   return [question, correctAnswer];
 };

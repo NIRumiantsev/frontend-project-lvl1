@@ -3,28 +3,25 @@ import engineRun from '../index.js';
 import generateRandomNumber from '../utils.js';
 
 const isPrime = (number) => {
-  if (number <= 0) {
+  if (number <= 1) {
     return false;
   }
 
-  let divisor = 1;
-
-  for (let ind = 2; ind <= number; ind += 1) {
-    if (number % ind !== 0) {
-      divisor = ind;
+  for (let divisor = 2; divisor <= number; divisor += 1) {
+    if (number % divisor === 0) {
+      return divisor === number;
     }
   }
-  return divisor === number;
 };
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getQuestionAndAnswer = () => {
-  const question = generateRandomNumber(0, 100);
+  let question = generateRandomNumber(0, 100);
 
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
-  return [question, correctAnswer];
+  return [question.toString(), correctAnswer];
 };
 
 export default () => engineRun(gameDescription, getQuestionAndAnswer);

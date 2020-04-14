@@ -2,37 +2,31 @@ import engineRun from '../index.js';
 
 import generateRandomNumber from '../utils.js';
 
-const findDivisor = (firstNumber, secondNumber) => {
-  if (firstNumber === 0 && secondNumber !== 0) {
-    return secondNumber;
-  }
-  if (secondNumber === 0 && secondNumber !== 0) {
-    return firstNumber;
-  }
-  if (secondNumber === 0 && firstNumber === 0) {
-    return 0;
+const findDivisor = (number1, number2) => {
+  if (number1 === 0 || number2 === 0) {
+    return number1 + number2;
   }
 
-  let result;
+  let gcd;
 
-  for (let ind = 1; ind <= firstNumber && ind <= secondNumber; ind += 1) {
-    if (firstNumber % ind === 0 && secondNumber % ind === 0) {
-      result = ind;
+  for (let divisor = 1; divisor <= Math.min(number1, number2); divisor += 1) {
+    if (number1 % divisor === 0 && number2 % divisor === 0) {
+      gcd = divisor;
     }
   }
-  return result;
+  return gcd;
 };
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const getQuestionAndAnswer = () => {
-  const randomNumberFirst = generateRandomNumber(0, 100);
+  const number1 = generateRandomNumber(0, 100);
 
-  const randomNumberSecond = generateRandomNumber(0, 100);
+  const number2 = generateRandomNumber(0, 100);
 
-  const question = `${randomNumberFirst} ${randomNumberSecond}`;
+  const question = `${number1} ${number2}`;
 
-  const correctAnswer = findDivisor(randomNumberFirst, randomNumberSecond);
+  const correctAnswer = findDivisor(number1, number2);
 
   return [question, correctAnswer];
 };
