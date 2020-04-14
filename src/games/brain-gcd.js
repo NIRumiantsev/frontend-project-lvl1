@@ -26,9 +26,9 @@ const findDivisor = (firstNumber, secondNumber) => {
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const getQuestionAndAnswer = () => {
-  const randomNumberFirst = generateRandomNumber(100, 0);
+  const randomNumberFirst = generateRandomNumber(0, 100);
 
-  const randomNumberSecond = generateRandomNumber(100, 0);
+  const randomNumberSecond = generateRandomNumber(0, 100);
 
   const question = `${randomNumberFirst} ${randomNumberSecond}`;
 

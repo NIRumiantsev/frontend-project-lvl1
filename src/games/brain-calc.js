@@ -9,9 +9,9 @@ const gameDescription = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 
 const getQuestionAndAnswer = () => {
-  const randomNumberFirst = generateRandomNumber(100, 0);
+  const randomNumberFirst = generateRandomNumber(0, 100);
 
-  const randomNumberSecond = generateRandomNumber(100, 0);
+  const randomNumberSecond = generateRandomNumber(0, 100);
 
   const randomOperator = operators[generateRandomNumber(operators.length - 1, 0)];
 

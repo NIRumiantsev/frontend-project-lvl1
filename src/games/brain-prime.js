@@ -20,7 +20,7 @@ const isPrime = (number) => {
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getQuestionAndAnswer = () => {
-  const question = generateRandomNumber(100, 0);
+  const question = generateRandomNumber(0, 100);
 
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
 

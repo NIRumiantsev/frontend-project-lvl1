@@ -5,11 +5,11 @@ import generateRandomNumber from '../utils.js';
 const gameDescription = 'What number is missing in the progression?';
 
 const getQuestionAndAnswer = () => {
-  let randomNumber = generateRandomNumber(100, 0);
+  let randomNumber = generateRandomNumber(0, 100);
 
   const question = [randomNumber];
 
-  const randomIncrease = generateRandomNumber(10, 0);
+  const randomIncrease = generateRandomNumber(0, 10);
 
   for (let n = 0; n < 10; n += 1) {
     randomNumber += randomIncrease;
@@ -17,7 +17,7 @@ const getQuestionAndAnswer = () => {
     question.push(randomNumber);
   }
 
-  const randomLocation = generateRandomNumber(10, 0);
+  const randomLocation = generateRandomNumber(0, 10);
 
   const correctAnswer = question[randomLocation];
 
