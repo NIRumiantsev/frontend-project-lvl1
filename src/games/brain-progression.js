@@ -6,16 +6,16 @@ const gameDescription = 'What number is missing in the progression?';
 
 const generateProgression = (startNumber, difference, length) => {
   const progression = [];
-  for (let n = 0; n < length; n += 1) {
-    startNumber += difference;
-
-    progression.push(startNumber);
+  let number = startNumber;
+  for (let n = 0; n <= length; n += 1) {
+    number += difference;
+    progression.push(number);
   }
   return progression;
 };
 
 const getQuestionAndAnswer = () => {
-  let randomNumber = generateRandomNumber(0, 100);
+  const startNumber = generateRandomNumber(0, 100);
 
   const difference = generateRandomNumber(0, 10);
 
@@ -23,7 +23,7 @@ const getQuestionAndAnswer = () => {
 
   const progressionLength = 10;
 
-  const question = generateProgression(randomNumber, difference, progressionLength);
+  const question = generateProgression(startNumber, difference, progressionLength);
 
   const correctAnswer = question[location];
 

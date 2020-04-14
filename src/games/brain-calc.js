@@ -13,9 +13,9 @@ const calculateAnswer = (number1, operator, number2) => {
     case '+':
       return number1 + number2;
     case '-':
-      return  number1 - number2;
+      return number1 - number2;
     case '*':
-      return  number1 * number2;
+      return number1 * number2;
     default:
       throw new Error(`Unknown operator: '${operator}'!`);
   }
@@ -30,7 +30,7 @@ const getQuestionAndAnswer = () => {
 
   const question = `${number1} ${operator} ${number2}`;
 
-  let correctAnswer = calculateAnswer(number1, operator, number2);
+  const correctAnswer = calculateAnswer(number1, operator, number2);
 
   return [question, correctAnswer];
 };

@@ -12,12 +12,13 @@ const isPrime = (number) => {
       return divisor === number;
     }
   }
+  return false;
 };
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getQuestionAndAnswer = () => {
-  let question = generateRandomNumber(0, 100);
+  const question = generateRandomNumber(0, 100);
 
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
