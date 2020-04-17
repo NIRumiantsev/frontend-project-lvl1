@@ -28,7 +28,7 @@ const getQuestionAndAnswer = () => {
 
   const correctAnswer = findDivisor(number1, number2);
 
-  return [question, correctAnswer];
+  return [question, correctAnswer.toString()];
 };
 
 export default () => engineRun(gameDescription, getQuestionAndAnswer);

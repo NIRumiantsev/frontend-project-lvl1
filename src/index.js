@@ -1,5 +1,3 @@
-/* eslint eqeqeq: 0 */ // --> OFF
-
 import readlineSync from 'readline-sync';
 
 const count = 3;
@@ -20,7 +18,7 @@ const engineRun = (gameDescription, getQuestionAndAnswer) => {
 
     const answer = readlineSync.question('Your answer: ');
 
-    if (correctAnswer == answer.toLowerCase()) {
+    if (correctAnswer === answer.toLowerCase()) {
       console.log('Correct!');
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);

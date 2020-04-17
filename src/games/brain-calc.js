@@ -8,7 +8,7 @@ const gameDescription = 'What is the result of the expression?';
 
 const operators = ['+', '-', '*'];
 
-const calculateAnswer = (number1, operator, number2) => {
+const calculate = (number1, operator, number2) => {
   switch (operator) {
     case '+':
       return number1 + number2;
@@ -26,13 +26,13 @@ const getQuestionAndAnswer = () => {
 
   const number2 = generateRandomNumber(0, 100);
 
-  const operator = operators[generateRandomNumber(operators.length - 1, 0)];
+  const operator = operators[generateRandomNumber(0, operators.length - 1)];
 
   const question = `${number1} ${operator} ${number2}`;
 
-  const correctAnswer = calculateAnswer(number1, operator, number2);
+  const correctAnswer = calculate(number1, operator, number2);
 
-  return [question, correctAnswer];
+  return [question, correctAnswer.toString()];
 };
 
 export default () => engineRun(gameDescription, getQuestionAndAnswer);

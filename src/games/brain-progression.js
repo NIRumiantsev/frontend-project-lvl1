@@ -4,32 +4,32 @@ import generateRandomNumber from '../utils.js';
 
 const gameDescription = 'What number is missing in the progression?';
 
-const generateProgression = (startNumber, difference, length) => {
+const generateProgression = (firstNumber, difference, length) => {
   const progression = [];
-  let number = startNumber;
   for (let n = 0; n <= length; n += 1) {
-    number += difference;
-    progression.push(number);
+    progression.push(firstNumber + n * difference);
   }
   return progression;
 };
 
+const progressionLength = 10;
+
 const getQuestionAndAnswer = () => {
-  const startNumber = generateRandomNumber(0, 100);
+  const firstNumber = generateRandomNumber(0, 100);
 
-  const difference = generateRandomNumber(0, 10);
+  const difference = generateRandomNumber(1, 10);
 
-  const location = generateRandomNumber(0, 10);
+  const hiddenMemberIndex = generateRandomNumber(0, progressionLength);
 
-  const progressionLength = 10;
+  const progression = generateProgression(firstNumber, difference, progressionLength);
 
-  const question = generateProgression(startNumber, difference, progressionLength);
+  const correctAnswer = progression[hiddenMemberIndex];
 
-  const correctAnswer = question[location];
+  progression[hiddenMemberIndex] = '..';
 
-  question[location] = '..';
+  const question = progression.join();
 
-  return [question, correctAnswer];
+  return [question, correctAnswer.toString()];
 };
 
 export default () => engineRun(gameDescription, getQuestionAndAnswer);
